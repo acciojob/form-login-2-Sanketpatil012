@@ -1,15 +1,13 @@
 //your JS code here. If required.
+ document.getElementById("userForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
 
-let btn= document.getElementById("btn")
+            let firstName = document.getElementById("firstName").value.trim();
+            let lastName = document.getElementById("lastName").value.trim();
+            let phoneNumber = document.getElementById("phoneNumber").value.trim();
+            let emailID = document.getElementById("emailID").value.trim();
 
-btn.addEventListener('click' , ()=>{
-    event.preventDefault()
-	let firstname= document.getElementById('name').value 
-	let  lastname= document.getElementById('last_name').value
-	let  phoneNumber= document.getElementById('number').value
-	let emailid = document.getElementById('email').value
-	alert(`First Name:${firstname} Last Name:${lastname} Phone Number:${phoneNumber} Email ID:${emailid}   `)
-})
-
-
-
+            let alertMessage = `First Name: ${firstName}  Last Name: ${lastName}  Phone Number: ${phoneNumber}  Email ID: ${emailID}`;
+            
+            alert(alertMessage);
+        });
